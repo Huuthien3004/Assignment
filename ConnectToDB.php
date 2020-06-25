@@ -6,7 +6,7 @@
 
 <?php
 ini_set('display_errors', 1);
-echo "Hello Cloud computing class 0702!";
+echo "Welcome to ATN Store database!";
 ?>
 
 <?php
