@@ -23,12 +23,12 @@ if($pdo === false){
 //Khởi tạo Prepared Statement
 //$stmt = $pdo->prepare('INSERT INTO order (fullname, address, phone, mail) values (:fullname, :address, :phone, :mail)');
 
-//$stmt->bindParam(':fullname','huuthien');
+//$stmt->bindParam(':fullname','huu thien');
 //$stmt->bindParam(':address','da nang');
 //$stmt->bindParam(':phone', '1112223334');
 //$stmt->bindParam('mail', 'thien@gmail.com');
 //$stmt->execute();
-//$sql = "INSERT INTO order(fullname, address, phone, mail) VALUES('huuthien', 'da nang','1112223334','thien@gmail.com')";
+//$sql = "INSERT INTO order(fullname, address, phone, mail) VALUES('huu thien', 'da nang','1112223334','thien@gmail.com')";
 $sql = "INSERT INTO order(fullname, address, phone, mail)"
         . " VALUES('$_POST[fullname]','$_POST[address]','$_P111OST[phone]','$_POST[mail]')";
 $stmt = $pdo->prepare($sql);
