@@ -26,7 +26,7 @@ if($pdo === false){
 //$stmt->bindParam(':fullname','huu thien');
 //$stmt->bindParam(':address','da nang');
 //$stmt->bindParam(':phone', '1112223334');
-//$stmt->bindParam('mail', 'thien@gmail.com');
+//$stmt->bindParam(':mail', 'thien@gmail.com');
 //$stmt->execute();
 //$sql = "INSERT INTO order(fullname, address, phone, mail) VALUES('huu thien', 'da nang','1112223334','thien@gmail.com')";
 $sql = "INSERT INTO order(fullname, address, phone, mail)"
