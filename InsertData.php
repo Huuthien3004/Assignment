@@ -33,27 +33,27 @@ if($pdo === false){
 }
 
 //Khởi tạo Prepared Statement
-//$stmt = $pdo->prepare('INSERT INTO order (fullname, address, phone, mail) values (:fullname, :address, :phone, :mail)');
+//$stmt = $pdo->prepare('INSERT INTO customer (customerid, customername, customerphone, address) values (:id, :name, :phone, :address)');
 
-//$stmt->bindParam(':fullname','huu thien');
-//$stmt->bindParam(':address','da nang');
-//$stmt->bindParam(':phone', '1112223334');
-//$stmt->bindParam(':mail', 'thien@gmail.com');
+//$stmt->bindParam(':id','cus01');
+//$stmt->bindParam(':name','hoan');
+//$stmt->bindParam(':email', '0906564482');
+//$stmt->bindParam(':class', '24 le loi');
 //$stmt->execute();
-//$sql = "INSERT INTO order(fullname, address, phone, mail) VALUES('huu thien', 'da nang','1112223334','thien@gmail.com')";
-$sql = "INSERT INTO order(fullname, address, phone, mail)"
-        . " VALUES('$_POST[fullname]','$_POST[address]','$_P111OST[phone]','$_POST[mail]')";
+//$sql = "INSERT INTO customer(customerid, customername, customerphone, address) VALUES('cus01', 'hoan','0906564482','24 le loi')";
+$sql = "INSERT INTO customer(customerid, customername, customerphone, address)"
+        . " VALUES('$_POST[customerid]','$_POST[customername]','$_P111OST[customerphone]','$_POST[address]')";
 $stmt = $pdo->prepare($sql);
 //$stmt->execute();
- if (is_null($_POST[fullname])) {
-   echo "Please insert your detail";
+ if (is_null($_POST[customerid])) {
+   echo "customerid must be not null";
  }
  else
  {
     if($stmt->execute() == TRUE){
-        echo "Details inserted successfully.";
+        echo "Record inserted successfully.";
     } else {
-        echo "Error inserting details: ";
+        echo "Error inserting record: ";
     }
  }
 ?>
