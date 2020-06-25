@@ -33,14 +33,14 @@ if($pdo === false){
 }
 
 //Khởi tạo Prepared Statement
-//$stmt = $pdo->prepare('INSERT INTO student (customerid, customername, customerphone, address) values (:id, :name, :phone, :address)');
+//$stmt = $pdo->prepare('INSERT INTO customer (customerid, customername, customerphone, address) values (:id, :name, :phone, :address)');
 
 //$stmt->bindParam(':id','cus01');
 //$stmt->bindParam(':name','hoan');
-//$stmt->bindParam(':email', '23454675784');
+//$stmt->bindParam(':email', '0906564482');
 //$stmt->bindParam(':class', '24 le loi');
 //$stmt->execute();
-//$sql = "INSERT INTO customer(customerid, customername, customerphone, address) VALUES('cus01', 'hoan','23454675784','24 le loi')";
+//$sql = "INSERT INTO customer(customerid, customername, customerphone, address) VALUES('cus01', 'hoan','0906564482','24 le loi')";
 $sql = "INSERT INTO customer(customerid, customername, customerphone, address)"
         . " VALUES('$_POST[customerid]','$_POST[customername]','$_P111OST[customerphone]','$_POST[address]')";
 $stmt = $pdo->prepare($sql);
