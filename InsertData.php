@@ -10,17 +10,6 @@ list-style: none;
 </style>
 </head>
 <body>
-<h1>Order Checkuot</h1>
-<ul>
-    <form name="InsertData" action="InsertData.php" method="POST" >
-<li>Student ID:</li><li><input type="text" name="customerid" /></li>
-<li>Full Name:</li><li><input type="text" name="customername" /></li>
-<li>Email:</li><li><input type="text" name="customerphone" /></li>
-<li>Class:</li><li><input type="text" name="address" /></li>
-<li><input type="submit" /></li>
-</form>
-</ul>
-
 <?php
 
 if (empty(getenv("DATABASE_URL"))){
